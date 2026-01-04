@@ -1,0 +1,23 @@
+@use "sass:map";
+
+//breakpoints 
+$breakpoints: (
+  //スマホ最大幅767pxの画面に適用
+  "sp": "screen and (max-width: 767px)",
+  //タブレット最小幅768px、最大幅1024pxの画面に適用
+  "tb": "screen and (min-width: 768px) and (max-width: 1024px)",
+  //pc最小幅768pxの画面に適用
+  "pc": "screen and (min-width: 768px)",
+  //この変数がまだ定義されていない場合にのみ値が設定されるようにする
+) !default;
+
+//mixin
+//デフォルトでpcに設定
+@mixin mq($breakpoint: pc){
+    //$breakpointsマップから引数で渡された$breakpointに対応するメディアクエリ条件を取得
+    //@media 取得したメディアクエリの条件に基づいてメディアクエリ生成
+    @media #{map.get($breakpoints, $breakpoint)}{
+        //@mixinが呼ばれた地点で定義されたスタイル（@content）をメディアクエリ内に挿入
+        @content;
+    }
+}
