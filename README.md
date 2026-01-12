@@ -16,9 +16,8 @@
 *   CSS (Sass)
 *   JavaScript (jQuery)
 
-### サイトの確認
-　
-1. ローカルサーバーを起動します。（例: Visual Studio CodeのLive Server拡張機能など）
-2.  ブラウザで `index.html` にアクセスします。
+## このポートフォリオで学んだこと
 
-
+* 基本的なHTML / CSS / JavaScriptの理解
+* レスポンシブ対応を意識したレイアウト設計
+* 実際に手を動かしてサイトを完成させた経験
